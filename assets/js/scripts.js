@@ -1,13 +1,13 @@
-const callButton = document.getElementById("call")
-const student = document.getElementById("student")
-const rainCheck = document.getElementById("rain-check")
+const callButton = document.getElementById("call");
+const student = document.getElementById("student");
+const rainCheck = document.getElementById("rain-check");
 
-const studentList = ["J.T.", "Max", "Bryce", "Francisco", "Joshua", "Alvin", "Janani", "Lee", "Nell",
-"Andrew", "Beth-Ann", "Erika", "Lindsey", "Parker", "Samantha", "Sunny"]
+//  TODO: Add ability to add/remove names.  Potientially option to clear name list
+const studentList = ["Alvin", "Andrew", "Beth-Ann", "Bryce", "Erika", "Francisco", "Janani", "Joshua", "J.T.", "Lee", "Lindsey", "Max", "Nell", "Parker", "Samantha", "Sunny"]
 
 let i = studentList.length;
-let availableStudents = []
-availableStudents.push(...studentList)
+let availableStudents = [];
+availableStudents.push(...studentList);
 const selectStudent = function() {
     availableStudents.splice(i, 1);
     shuffleStudent();
@@ -25,6 +25,6 @@ const shuffleStudent = function() {
 }
 
 
-rainCheck.addEventListener("click", shuffleStudent)
+rainCheck.addEventListener("click", shuffleStudent);
 
-callButton.addEventListener("click", selectStudent)
+callButton.addEventListener("click", selectStudent);
